@@ -26,7 +26,37 @@ public class Question5
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
      
-    Scanner in = new Scanner(System.in);
-    
+    Scanner userinput = new Scanner(System.in);
+    List<Integer> numlist = new ArrayList<Integer>();
+    System.out.println("Enter a number: ");
+    int number = Integer.parseInt(userinput.nextLine());
+
+    for(int i = 0; i< number; ++i){
+      System.out.println("Enter a number: ");
+      int numbers = Integer.parseInt(userinput.nextLine());
+      numlist.add(numbers);
+    }
+
+    Integer[] numarray = new Integer[numlist.size()]; 
+
+    numarray = numlist.toArray(numarray);
+
+    int element = 0;
+    int count = 0;
+    for(int i=0;i<numarray.length;i++){
+      int tempElement = numarray[i];
+      int tempCount = 0;
+      for(int p=0;p<numarray.length;p++){
+        if(numarray[p]==tempElement){
+          tempCount++;
+        }
+      }
+      if(tempCount>count){
+        element = tempElement;
+        count = tempCount;
+      }
+    }
+
+    System.out.println("The most frequent number is " + element);
   }
 }
