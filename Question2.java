@@ -10,8 +10,8 @@ public class Question2
      * Hint: in.nextDouble() to read double
      */
      
-    Scanner in = new Scanner(System.in);
-    double height = in.nextDouble();
+    Scanner userinput = new Scanner(System.in);
+    double height = Double.parseDouble(userinput.nextLine());
     
     System.out.println("Enter weight: ");
     double weight = Double.parseDouble(userinput.nextLine());
