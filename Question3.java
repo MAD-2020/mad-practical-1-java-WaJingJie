@@ -10,7 +10,13 @@ public class Question3
      * Hint: in.nextInt() to read integer
      */
      
-    Scanner in = new Scanner(System.in);
+    Scanner userinput = new Scanner(System.in);
     
+    System.out.println("Enter number: ");
+    double number = Double.parseDouble(userinput.nextLine());
+    
+    double multiply = number * number;
+    
+    System.out.println(multiply);
   }
 }
